@@ -8,9 +8,9 @@ import {Busyo} from './busyo'
     templateUrl: './busyo-form.component.html'
 })
 export class BusyoFormComponent {
-    powers = [ 'A+','A','B','C','D' ];
+    powers = [ 'A++','A+','A','B','C','D' ];
 
-    model = new Busyo( 18,'竹中半兵衛',this.powers[0],'天才軍師');
+    model = new Busyo( 19,'竹中半兵衛',this.powers[0],'天才軍師');
 
     submitted = false;
 
