@@ -14,7 +14,15 @@ export class BusyoFormComponent {
 
     submitted = false;
 
-    onSubmit() { this.submitted=true; }
+    onSubmit() { 
+        this.submitted=true;
+
+        console.info("サブミット！");
+    }
+
+    newBusyo() {
+        this.model = new Busyo(33,'','');
+    }
 
     // TODO: Remove this when we're done
     get diagnostic() { return JSON.stringify(this.model);}
