@@ -13,8 +13,24 @@
             </div>
 
             <div class="form-group">
+                <label for="master">主人</label>
+                <input type="text" class="form-control" id="master" required [(ngModel)]="model.master" name="master" #master="ngModel">
+                <!--<br>TODO: remove this: {{spy.className}}-->
+                <div [hidden]="master.valid || master.pristine" class="alert alert-danger">
+                    主人は必須です！
+                </div>
+            </div>
+
+            <div class="form-group">
                 <label for="comment">備考</label>
                 <input type="text" class="form-control" id="comment" [(ngModel)]="model.comment" name="comment">
+            </div>
+
+            <div class="form-group">
+                <label for="intelligence">知力</label>
+                <select class="form-control" id="intelligence" required [(ngModel)]="model.intelligence" name="intelligence">
+                    <option *ngFor="let pow of powers" [value]="pow">{{pow}}</option>
+                </select>
             </div>
 
             <div class="form-group">
@@ -36,8 +52,16 @@
             <div class="col-xs-9 pull-left">{{model.name}}</div>
         </div>
         <div class="row">
+            <div class="col-xs-3">主人</div>
+            <div class="col-xs-9 pull-left">{{model.master}}</div>
+        </div>
+        <div class="row">
             <div class="col-xs-3">備考</div>
             <div class="col-xs-9 pull-left">{{model.comment}}</div>
+        </div>
+        <div class="row">
+            <div class="col-xs-3">知力</div>
+            <div class="col-xs-9 pull-left">{{model.intelligence}}</div>
         </div>
         <div class="row">
             <div class="col-xs-3">戦闘力</div>
