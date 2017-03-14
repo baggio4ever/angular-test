@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 
 import { AppComponent }  from './app.component';
 import { BusyoFormComponent } from './busyo-form.component';
+import { SizerComponent } from './sizer.component';
 
 @NgModule({
   imports:      [ 
@@ -12,7 +13,8 @@ import { BusyoFormComponent } from './busyo-form.component';
   ],
   declarations: [
     AppComponent,
-    BusyoFormComponent
+    BusyoFormComponent,
+    SizerComponent
   ],
   bootstrap:    [ AppComponent ]
 })
